@@ -13,10 +13,9 @@ public class Main {
 		for (int i = 0; i < 10; i++) {
 			ThreadPool.getExecutor().execute(new Thread1(cont));
 			cont++;
-		}		
-		
+		}
 		//Thread.sleep(15000);
-		System.err.println("TIME LIMITE PLUS");
+		//System.err.println("TIME LIMITE PLUS");
 		
 		for (int i = 0; i < 5; i++) {
 			ThreadPool.getExecutor().execute(new Thread1(cont));
@@ -24,13 +23,13 @@ public class Main {
 		}
 		
 		//Thread.sleep(15000);
-		System.err.println("TIME LIMITE PLUS");
+		//System.err.println("TIME LIMITE PLUS");
 		
 		ThreadPool.getExecutor().execute(new Thread1(cont));
 		cont++;
 		
 		//Thread.sleep(15000);
-		System.err.println("TIME LIMITE PLUS");
+		//System.err.println("TIME LIMITE PLUS");
 		
 		ThreadPool.getExecutor().execute(new Thread1(cont));
 		cont++;
@@ -41,12 +40,12 @@ public class Main {
         	//System.err.println("WAIT ...");
         //}
         	
-    	Thread.sleep(15000);
-        System.err.println("THREAD POS>> "+cont);
-        ThreadPool.getExecutor().execute(new Thread1(cont));
-        
-        ThreadPool.getExecutor().shutdown();
-        ThreadPool.getExecutor().shutdown();
+    	//Thread.sleep(15000);
+        System.err.println("FIM DA Main.java");
+//        ThreadPool.getExecutor().execute(new Thread1(cont));
+//        
+//        ThreadPool.getExecutor().shutdown();
+//        ThreadPool.getExecutor().shutdown();
         
         
        

@@ -9,7 +9,7 @@ public class ThreadPool {
 	
 	public static ExecutorService getExecutor() {
 		if(executor == null || executor.isShutdown() || executor.isTerminated()) {
-			executor = Executors.newFixedThreadPool(5);//creating a pool of 5 threads			
+			executor = Executors.newFixedThreadPool(3);//creating a pool of 5 threads			
 		}
 		return executor;
 	}

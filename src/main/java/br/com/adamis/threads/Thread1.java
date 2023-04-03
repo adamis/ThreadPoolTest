@@ -10,13 +10,17 @@ public class Thread1 implements Runnable {
 	
 	public void run() {
 		try {
-			System.out.println("THREAD "+cont+" INICIADO");
-			for (int i = 0; i < 5; i++) {
-				Thread.sleep(cont);	
+			System.out.println("THREAD "+cont+" INICIADO SLEEP: "+(1000+getRandomNumber(1000, 5000)));
+			for (int i = 0; i < 2; i++) {
+				Thread.sleep(1000+getRandomNumber(1000, 10000));	
 			}			
 			System.err.println("THREAD "+cont+" FINALIZADO");
 		} catch (InterruptedException e) {		
 			e.printStackTrace();
 		}
+	}
+	
+	public int getRandomNumber(int min, int max) {
+	    return (int) ((Math.random() * (max - min)) + min);
 	}
 }
