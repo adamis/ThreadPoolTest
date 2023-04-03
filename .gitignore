@@ -1,1 +1,6 @@
+/.settings/*
 *.class
+.classpath
+*.prefs
+*.properties
+/target/*
