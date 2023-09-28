@@ -5,16 +5,16 @@ import java.util.concurrent.Executors;
 
 public class ThreadPool {
 
-	private static ExecutorService executor;  
+	private ExecutorService executor;  
 	
-	public static ExecutorService getExecutor() {
+	public ExecutorService getExecutor() {
 		if(executor == null || executor.isShutdown() || executor.isTerminated()) {
 			executor = Executors.newFixedThreadPool(3);//creating a pool of 5 threads			
 		}
 		return executor;
 	}
 	
-	public static boolean checkExecutorIsTerminate() {
+	public boolean checkExecutorIsTerminate() {
 		return executor.isTerminated();
 	}
 	
